@@ -40,6 +40,8 @@ class ColorItViewController : UIViewController {
         
         inputImageURL.resignFirstResponder()
         
+        let imageData = ImageData(fromURL: inputImageURL.text!)
+        
         NetworkingProvider.shared.getOutputImageURL(inputImageURL: inputImageURL.text!) { (url) in
             
             self.outputImageURL = url
@@ -52,6 +54,7 @@ class ColorItViewController : UIViewController {
         } failure: { (error) in
             self.okAlert(title: "Error", message: "Error \(error!)")
         }
+        
         
     }
     
