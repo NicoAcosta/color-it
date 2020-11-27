@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		033F8700256D67A6008DE77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F86FF256D67A6008DE77B /* AppDelegate.swift */; };
+		033F8702256D67A6008DE77B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8701256D67A6008DE77B /* SceneDelegate.swift */; };
+		033F8704256D67A6008DE77B /* GetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8703256D67A6008DE77B /* GetImageViewController.swift */; };
+		033F8707256D67A6008DE77B /* GetImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033F8705256D67A6008DE77B /* GetImageViewController.storyboard */; };
+		033F8709256D67A9008DE77B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033F8708256D67A9008DE77B /* Assets.xcassets */; };
+		033F870C256D67A9008DE77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033F870A256D67A9008DE77B /* LaunchScreen.storyboard */; };
+		033F8722256D6BE2008DE77B /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8721256D6BE2008DE77B /* NetworkingProvider.swift */; };
+		033F8727256D6D22008DE77B /* imageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8726256D6D22008DE77B /* imageResponse.swift */; };
+		033F875E256DE147008DE77B /* alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F875D256DE147008DE77B /* alerts.swift */; };
+		033F876F256E0B06008DE77B /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F876E256E0B06008DE77B /* api.swift */; };
+		033F8775256E1652008DE77B /* kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8774256E1651008DE77B /* kingfisher.swift */; };
+		03F103EE256EE7C70004A2BD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F103ED256EE7C70004A2BD /* ImageViewController.swift */; };
+		03F103F2256EE7D00004A2BD /* ImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */; };
+		03F10405256EE8CA0004A2BD /* GothamUltraItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F7256EE8CA0004A2BD /* GothamUltraItalic.ttf */; };
+		03F10406256EE8CA0004A2BD /* GothamXLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F8256EE8CA0004A2BD /* GothamXLightItalic.ttf */; };
+		03F10407256EE8CA0004A2BD /* GothamUltra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F9256EE8CA0004A2BD /* GothamUltra.ttf */; };
+		03F10408256EE8CA0004A2BD /* GothamLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FA256EE8CA0004A2BD /* GothamLight.ttf */; };
+		03F10409256EE8CA0004A2BD /* GothamBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FB256EE8CA0004A2BD /* GothamBlack.ttf */; };
+		03F1040A256EE8CA0004A2BD /* GothamBlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FC256EE8CA0004A2BD /* GothamBlackItalic.ttf */; };
+		03F1040B256EE8CA0004A2BD /* GothamMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FD256EE8CA0004A2BD /* GothamMediumItalic.ttf */; };
+		03F1040C256EE8CA0004A2BD /* GothamBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FE256EE8CA0004A2BD /* GothamBold.ttf */; };
+		03F1040D256EE8CA0004A2BD /* GothamThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103FF256EE8CA0004A2BD /* GothamThinItalic.ttf */; };
+		03F1040E256EE8CA0004A2BD /* GothamBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10400256EE8CA0004A2BD /* GothamBoldItalic.ttf */; };
+		03F1040F256EE8CA0004A2BD /* GothamXLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10401256EE8CA0004A2BD /* GothamXLight.ttf */; };
+		03F10410256EE8CA0004A2BD /* GothamLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10402256EE8CA0004A2BD /* GothamLightItalic.ttf */; };
+		03F10411256EE8CA0004A2BD /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10403256EE8CA0004A2BD /* GothamMedium.ttf */; };
+		03F10412256EE8CA0004A2BD /* GothamThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10404256EE8CA0004A2BD /* GothamThin.ttf */; };
+		03F10416256EEFC90004A2BD /* ColorItViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */; };
+		03F10419256EEFD60004A2BD /* ColorItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F10418256EEFD60004A2BD /* ColorItViewController.swift */; };
+		03F1041C256F280A0004A2BD /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F1041B256F280A0004A2BD /* colors.swift */; };
+		03F1042E256F78B30004A2BD /* imageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F1042D256F78B30004A2BD /* imageData.swift */; };
+		03F10432256F7A6F0004A2BD /* ImageData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03F10430256F7A6F0004A2BD /* ImageData.xcdatamodeld */; };
+		31DD02915000E02773EFD093 /* Pods_Hue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D83D3A49E654F406F3EEFC /* Pods_Hue.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		033F86FC256D67A6008DE77B /* Hue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		033F86FF256D67A6008DE77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		033F8701256D67A6008DE77B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		033F8703256D67A6008DE77B /* GetImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImageViewController.swift; sourceTree = "<group>"; };
+		033F8706256D67A6008DE77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GetImageViewController.storyboard; sourceTree = "<group>"; };
+		033F8708256D67A9008DE77B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		033F870B256D67A9008DE77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		033F870D256D67A9008DE77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		033F8721256D6BE2008DE77B /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		033F8726256D6D22008DE77B /* imageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageResponse.swift; sourceTree = "<group>"; };
+		033F875D256DE147008DE77B /* alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alerts.swift; sourceTree = "<group>"; };
+		033F876E256E0B06008DE77B /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		033F8774256E1651008DE77B /* kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kingfisher.swift; sourceTree = "<group>"; };
+		03F103ED256EE7C70004A2BD /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewController.storyboard; sourceTree = "<group>"; };
+		03F103F7256EE8CA0004A2BD /* GothamUltraItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltraItalic.ttf; sourceTree = "<group>"; };
+		03F103F8256EE8CA0004A2BD /* GothamXLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamXLightItalic.ttf; sourceTree = "<group>"; };
+		03F103F9256EE8CA0004A2BD /* GothamUltra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltra.ttf; sourceTree = "<group>"; };
+		03F103FA256EE8CA0004A2BD /* GothamLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamLight.ttf; sourceTree = "<group>"; };
+		03F103FB256EE8CA0004A2BD /* GothamBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBlack.ttf; sourceTree = "<group>"; };
+		03F103FC256EE8CA0004A2BD /* GothamBlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBlackItalic.ttf; sourceTree = "<group>"; };
+		03F103FD256EE8CA0004A2BD /* GothamMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMediumItalic.ttf; sourceTree = "<group>"; };
+		03F103FE256EE8CA0004A2BD /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
+		03F103FF256EE8CA0004A2BD /* GothamThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamThinItalic.ttf; sourceTree = "<group>"; };
+		03F10400256EE8CA0004A2BD /* GothamBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBoldItalic.ttf; sourceTree = "<group>"; };
+		03F10401256EE8CA0004A2BD /* GothamXLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamXLight.ttf; sourceTree = "<group>"; };
+		03F10402256EE8CA0004A2BD /* GothamLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamLightItalic.ttf; sourceTree = "<group>"; };
+		03F10403256EE8CA0004A2BD /* GothamMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.ttf; sourceTree = "<group>"; };
+		03F10404256EE8CA0004A2BD /* GothamThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamThin.ttf; sourceTree = "<group>"; };
+		03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorItViewController.storyboard; sourceTree = "<group>"; };
+		03F10418256EEFD60004A2BD /* ColorItViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItViewController.swift; sourceTree = "<group>"; };
+		03F1041B256F280A0004A2BD /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		03F1042D256F78B30004A2BD /* imageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageData.swift; sourceTree = "<group>"; };
+		03F10431256F7A6F0004A2BD /* ImageData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageData.xcdatamodel; sourceTree = "<group>"; };
+		12D83D3A49E654F406F3EEFC /* Pods_Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75171A1955DE8A5B774766A1 /* Pods-Hue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hue.debug.xcconfig"; path = "Target Support Files/Pods-Hue/Pods-Hue.debug.xcconfig"; sourceTree = "<group>"; };
+		BAA64BD6BA18B8B6879AC33F /* Pods-Hue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hue.release.xcconfig"; path = "Target Support Files/Pods-Hue/Pods-Hue.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		033F86F9256D67A6008DE77B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31DD02915000E02773EFD093 /* Pods_Hue.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		033F86F3256D67A6008DE77B = {
+			isa = PBXGroup;
+			children = (
+				03F103F5256EE8CA0004A2BD /* Fonts */,
+				033F86FE256D67A6008DE77B /* Hue */,
+				033F86FD256D67A6008DE77B /* Products */,
+				0AA3E8701EB182D1D16405DB /* Pods */,
+				FF960CD872136649911AE8E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		033F86FD256D67A6008DE77B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				033F86FC256D67A6008DE77B /* Hue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		033F86FE256D67A6008DE77B /* Hue */ = {
+			isa = PBXGroup;
+			children = (
+				033F8724256D6CB1008DE77B /* Network */,
+				033F86FF256D67A6008DE77B /* AppDelegate.swift */,
+				033F8701256D67A6008DE77B /* SceneDelegate.swift */,
+				033F8708256D67A9008DE77B /* Assets.xcassets */,
+				033F870A256D67A9008DE77B /* LaunchScreen.storyboard */,
+				033F870D256D67A9008DE77B /* Info.plist */,
+				033F875D256DE147008DE77B /* alerts.swift */,
+				033F8771256E0B1A008DE77B /* Views */,
+				03F10430256F7A6F0004A2BD /* ImageData.xcdatamodeld */,
+			);
+			path = Hue;
+			sourceTree = "<group>";
+		};
+		033F8724256D6CB1008DE77B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				033F8725256D6CBB008DE77B /* Data */,
+				033F8721256D6BE2008DE77B /* NetworkingProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		033F8725256D6CBB008DE77B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				033F8726256D6D22008DE77B /* imageResponse.swift */,
+				03F1042D256F78B30004A2BD /* imageData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		033F8771256E0B1A008DE77B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03F1041B256F280A0004A2BD /* colors.swift */,
+				03F10414256EEFAF0004A2BD /* Color it */,
+				03F103EC256EE7AC0004A2BD /* ImageView */,
+				033F8772256E0B1F008DE77B /* Get image */,
+				033F8774256E1651008DE77B /* kingfisher.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		033F8772256E0B1F008DE77B /* Get image */ = {
+			isa = PBXGroup;
+			children = (
+				033F8703256D67A6008DE77B /* GetImageViewController.swift */,
+				033F876E256E0B06008DE77B /* api.swift */,
+				033F8705256D67A6008DE77B /* GetImageViewController.storyboard */,
+			);
+			path = "Get image";
+			sourceTree = "<group>";
+		};
+		03F103EC256EE7AC0004A2BD /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				03F103ED256EE7C70004A2BD /* ImageViewController.swift */,
+				03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		03F103F5256EE8CA0004A2BD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				03F103F6256EE8CA0004A2BD /* Gotham */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		03F103F6256EE8CA0004A2BD /* Gotham */ = {
+			isa = PBXGroup;
+			children = (
+				03F103F7256EE8CA0004A2BD /* GothamUltraItalic.ttf */,
+				03F103F8256EE8CA0004A2BD /* GothamXLightItalic.ttf */,
+				03F103F9256EE8CA0004A2BD /* GothamUltra.ttf */,
+				03F103FA256EE8CA0004A2BD /* GothamLight.ttf */,
+				03F103FB256EE8CA0004A2BD /* GothamBlack.ttf */,
+				03F103FC256EE8CA0004A2BD /* GothamBlackItalic.ttf */,
+				03F103FD256EE8CA0004A2BD /* GothamMediumItalic.ttf */,
+				03F103FE256EE8CA0004A2BD /* GothamBold.ttf */,
+				03F103FF256EE8CA0004A2BD /* GothamThinItalic.ttf */,
+				03F10400256EE8CA0004A2BD /* GothamBoldItalic.ttf */,
+				03F10401256EE8CA0004A2BD /* GothamXLight.ttf */,
+				03F10402256EE8CA0004A2BD /* GothamLightItalic.ttf */,
+				03F10403256EE8CA0004A2BD /* GothamMedium.ttf */,
+				03F10404256EE8CA0004A2BD /* GothamThin.ttf */,
+			);
+			path = Gotham;
+			sourceTree = "<group>";
+		};
+		03F10414256EEFAF0004A2BD /* Color it */ = {
+			isa = PBXGroup;
+			children = (
+				03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */,
+				03F10418256EEFD60004A2BD /* ColorItViewController.swift */,
+			);
+			path = "Color it";
+			sourceTree = "<group>";
+		};
+		0AA3E8701EB182D1D16405DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75171A1955DE8A5B774766A1 /* Pods-Hue.debug.xcconfig */,
+				BAA64BD6BA18B8B6879AC33F /* Pods-Hue.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF960CD872136649911AE8E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12D83D3A49E654F406F3EEFC /* Pods_Hue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		033F86FB256D67A6008DE77B /* Hue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 033F8710256D67A9008DE77B /* Build configuration list for PBXNativeTarget "Hue" */;
+			buildPhases = (
+				CCDC77E409781A16B13C5950 /* [CP] Check Pods Manifest.lock */,
+				033F86F8256D67A6008DE77B /* Sources */,
+				033F86F9256D67A6008DE77B /* Frameworks */,
+				033F86FA256D67A6008DE77B /* Resources */,
+				A91BE8ED8475F9EFA82E7486 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hue;
+			productName = Hue;
+			productReference = 033F86FC256D67A6008DE77B /* Hue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		033F86F4256D67A6008DE77B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					033F86FB256D67A6008DE77B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 033F86F7256D67A6008DE77B /* Build configuration list for PBXProject "Hue" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 033F86F3256D67A6008DE77B;
+			productRefGroup = 033F86FD256D67A6008DE77B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				033F86FB256D67A6008DE77B /* Hue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		033F86FA256D67A6008DE77B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F10406256EE8CA0004A2BD /* GothamXLightItalic.ttf in Resources */,
+				03F10409256EE8CA0004A2BD /* GothamBlack.ttf in Resources */,
+				03F1040A256EE8CA0004A2BD /* GothamBlackItalic.ttf in Resources */,
+				033F870C256D67A9008DE77B /* LaunchScreen.storyboard in Resources */,
+				03F10405256EE8CA0004A2BD /* GothamUltraItalic.ttf in Resources */,
+				03F10408256EE8CA0004A2BD /* GothamLight.ttf in Resources */,
+				03F10411256EE8CA0004A2BD /* GothamMedium.ttf in Resources */,
+				03F103F2256EE7D00004A2BD /* ImageViewController.storyboard in Resources */,
+				03F10407256EE8CA0004A2BD /* GothamUltra.ttf in Resources */,
+				03F10412256EE8CA0004A2BD /* GothamThin.ttf in Resources */,
+				033F8709256D67A9008DE77B /* Assets.xcassets in Resources */,
+				03F1040D256EE8CA0004A2BD /* GothamThinItalic.ttf in Resources */,
+				03F1040B256EE8CA0004A2BD /* GothamMediumItalic.ttf in Resources */,
+				03F1040F256EE8CA0004A2BD /* GothamXLight.ttf in Resources */,
+				033F8707256D67A6008DE77B /* GetImageViewController.storyboard in Resources */,
+				03F10416256EEFC90004A2BD /* ColorItViewController.storyboard in Resources */,
+				03F1040C256EE8CA0004A2BD /* GothamBold.ttf in Resources */,
+				03F1040E256EE8CA0004A2BD /* GothamBoldItalic.ttf in Resources */,
+				03F10410256EE8CA0004A2BD /* GothamLightItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A91BE8ED8475F9EFA82E7486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hue/Pods-Hue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hue/Pods-Hue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hue/Pods-Hue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDC77E409781A16B13C5950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		033F86F8256D67A6008DE77B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033F8704256D67A6008DE77B /* GetImageViewController.swift in Sources */,
+				03F103EE256EE7C70004A2BD /* ImageViewController.swift in Sources */,
+				033F8700256D67A6008DE77B /* AppDelegate.swift in Sources */,
+				03F1042E256F78B30004A2BD /* imageData.swift in Sources */,
+				03F10419256EEFD60004A2BD /* ColorItViewController.swift in Sources */,
+				033F876F256E0B06008DE77B /* api.swift in Sources */,
+				033F875E256DE147008DE77B /* alerts.swift in Sources */,
+				03F1041C256F280A0004A2BD /* colors.swift in Sources */,
+				033F8722256D6BE2008DE77B /* NetworkingProvider.swift in Sources */,
+				033F8775256E1652008DE77B /* kingfisher.swift in Sources */,
+				03F10432256F7A6F0004A2BD /* ImageData.xcdatamodeld in Sources */,
+				033F8727256D6D22008DE77B /* imageResponse.swift in Sources */,
+				033F8702256D67A6008DE77B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		033F8705256D67A6008DE77B /* GetImageViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				033F8706256D67A6008DE77B /* Base */,
+			);
+			name = GetImageViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		033F870A256D67A9008DE77B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				033F870B256D67A9008DE77B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		033F870E256D67A9008DE77B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		033F870F256D67A9008DE77B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		033F8711256D67A9008DE77B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75171A1955DE8A5B774766A1 /* Pods-Hue.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRJ3VT33GB;
+				INFOPLIST_FILE = Hue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nico.Hue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		033F8712256D67A9008DE77B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA64BD6BA18B8B6879AC33F /* Pods-Hue.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KRJ3VT33GB;
+				INFOPLIST_FILE = Hue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nico.Hue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		033F86F7256D67A6008DE77B /* Build configuration list for PBXProject "Hue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033F870E256D67A9008DE77B /* Debug */,
+				033F870F256D67A9008DE77B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		033F8710256D67A9008DE77B /* Build configuration list for PBXNativeTarget "Hue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				033F8711256D67A9008DE77B /* Debug */,
+				033F8712256D67A9008DE77B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03F10430256F7A6F0004A2BD /* ImageData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03F10431256F7A6F0004A2BD /* ImageData.xcdatamodel */,
+			);
+			currentVersion = 03F10431256F7A6F0004A2BD /* ImageData.xcdatamodel */;
+			path = ImageData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 033F86F4256D67A6008DE77B /* Project object */;
+}
