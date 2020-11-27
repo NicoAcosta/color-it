@@ -18,8 +18,8 @@
 		033F875E256DE147008DE77B /* alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F875D256DE147008DE77B /* alerts.swift */; };
 		033F876F256E0B06008DE77B /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F876E256E0B06008DE77B /* api.swift */; };
 		033F8775256E1652008DE77B /* kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033F8774256E1651008DE77B /* kingfisher.swift */; };
-		03F103EE256EE7C70004A2BD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F103ED256EE7C70004A2BD /* ImageViewController.swift */; };
-		03F103F2256EE7D00004A2BD /* ImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */; };
+		03F103EE256EE7C70004A2BD /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F103ED256EE7C70004A2BD /* ImageViewer.swift */; };
+		03F103F2256EE7D00004A2BD /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F1256EE7D00004A2BD /* ImageViewer.storyboard */; };
 		03F10405256EE8CA0004A2BD /* GothamUltraItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F7256EE8CA0004A2BD /* GothamUltraItalic.ttf */; };
 		03F10406256EE8CA0004A2BD /* GothamXLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F8256EE8CA0004A2BD /* GothamXLightItalic.ttf */; };
 		03F10407256EE8CA0004A2BD /* GothamUltra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F103F9256EE8CA0004A2BD /* GothamUltra.ttf */; };
@@ -34,8 +34,8 @@
 		03F10410256EE8CA0004A2BD /* GothamLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10402256EE8CA0004A2BD /* GothamLightItalic.ttf */; };
 		03F10411256EE8CA0004A2BD /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10403256EE8CA0004A2BD /* GothamMedium.ttf */; };
 		03F10412256EE8CA0004A2BD /* GothamThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03F10404256EE8CA0004A2BD /* GothamThin.ttf */; };
-		03F10416256EEFC90004A2BD /* ColorItViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */; };
-		03F10419256EEFD60004A2BD /* ColorItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F10418256EEFD60004A2BD /* ColorItViewController.swift */; };
+		03F10416256EEFC90004A2BD /* ColorItFromUrl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F10415256EEFC90004A2BD /* ColorItFromUrl.storyboard */; };
+		03F10419256EEFD60004A2BD /* ColorItFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F10418256EEFD60004A2BD /* ColorItFromUrl.swift */; };
 		03F1041C256F280A0004A2BD /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F1041B256F280A0004A2BD /* colors.swift */; };
 		03F1042E256F78B30004A2BD /* imageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F1042D256F78B30004A2BD /* imageData.swift */; };
 		03F10432256F7A6F0004A2BD /* ImageData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03F10430256F7A6F0004A2BD /* ImageData.xcdatamodeld */; };
@@ -56,8 +56,8 @@
 		033F875D256DE147008DE77B /* alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alerts.swift; sourceTree = "<group>"; };
 		033F876E256E0B06008DE77B /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		033F8774256E1651008DE77B /* kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kingfisher.swift; sourceTree = "<group>"; };
-		03F103ED256EE7C70004A2BD /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewController.storyboard; sourceTree = "<group>"; };
+		03F103ED256EE7C70004A2BD /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		03F103F1256EE7D00004A2BD /* ImageViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
 		03F103F7256EE8CA0004A2BD /* GothamUltraItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltraItalic.ttf; sourceTree = "<group>"; };
 		03F103F8256EE8CA0004A2BD /* GothamXLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamXLightItalic.ttf; sourceTree = "<group>"; };
 		03F103F9256EE8CA0004A2BD /* GothamUltra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltra.ttf; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		03F10402256EE8CA0004A2BD /* GothamLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamLightItalic.ttf; sourceTree = "<group>"; };
 		03F10403256EE8CA0004A2BD /* GothamMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMedium.ttf; sourceTree = "<group>"; };
 		03F10404256EE8CA0004A2BD /* GothamThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamThin.ttf; sourceTree = "<group>"; };
-		03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorItViewController.storyboard; sourceTree = "<group>"; };
-		03F10418256EEFD60004A2BD /* ColorItViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItViewController.swift; sourceTree = "<group>"; };
+		03F10415256EEFC90004A2BD /* ColorItFromUrl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorItFromUrl.storyboard; sourceTree = "<group>"; };
+		03F10418256EEFD60004A2BD /* ColorItFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItFromUrl.swift; sourceTree = "<group>"; };
 		03F1041B256F280A0004A2BD /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		03F1042D256F78B30004A2BD /* imageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageData.swift; sourceTree = "<group>"; };
 		03F10431256F7A6F0004A2BD /* ImageData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageData.xcdatamodel; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 		03F103EC256EE7AC0004A2BD /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
-				03F103ED256EE7C70004A2BD /* ImageViewController.swift */,
-				03F103F1256EE7D00004A2BD /* ImageViewController.storyboard */,
+				03F103ED256EE7C70004A2BD /* ImageViewer.swift */,
+				03F103F1256EE7D00004A2BD /* ImageViewer.storyboard */,
 			);
 			path = ImageView;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 		03F10414256EEFAF0004A2BD /* Color it */ = {
 			isa = PBXGroup;
 			children = (
-				03F10415256EEFC90004A2BD /* ColorItViewController.storyboard */,
-				03F10418256EEFD60004A2BD /* ColorItViewController.swift */,
+				03F10415256EEFC90004A2BD /* ColorItFromUrl.storyboard */,
+				03F10418256EEFD60004A2BD /* ColorItFromUrl.swift */,
 			);
 			path = "Color it";
 			sourceTree = "<group>";
@@ -299,7 +299,7 @@
 				03F10405256EE8CA0004A2BD /* GothamUltraItalic.ttf in Resources */,
 				03F10408256EE8CA0004A2BD /* GothamLight.ttf in Resources */,
 				03F10411256EE8CA0004A2BD /* GothamMedium.ttf in Resources */,
-				03F103F2256EE7D00004A2BD /* ImageViewController.storyboard in Resources */,
+				03F103F2256EE7D00004A2BD /* ImageViewer.storyboard in Resources */,
 				03F10407256EE8CA0004A2BD /* GothamUltra.ttf in Resources */,
 				03F10412256EE8CA0004A2BD /* GothamThin.ttf in Resources */,
 				033F8709256D67A9008DE77B /* Assets.xcassets in Resources */,
@@ -307,7 +307,7 @@
 				03F1040B256EE8CA0004A2BD /* GothamMediumItalic.ttf in Resources */,
 				03F1040F256EE8CA0004A2BD /* GothamXLight.ttf in Resources */,
 				033F8707256D67A6008DE77B /* GetImageViewController.storyboard in Resources */,
-				03F10416256EEFC90004A2BD /* ColorItViewController.storyboard in Resources */,
+				03F10416256EEFC90004A2BD /* ColorItFromUrl.storyboard in Resources */,
 				03F1040C256EE8CA0004A2BD /* GothamBold.ttf in Resources */,
 				03F1040E256EE8CA0004A2BD /* GothamBoldItalic.ttf in Resources */,
 				03F10410256EE8CA0004A2BD /* GothamLightItalic.ttf in Resources */,
@@ -364,10 +364,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				033F8704256D67A6008DE77B /* GetImageViewController.swift in Sources */,
-				03F103EE256EE7C70004A2BD /* ImageViewController.swift in Sources */,
+				03F103EE256EE7C70004A2BD /* ImageViewer.swift in Sources */,
 				033F8700256D67A6008DE77B /* AppDelegate.swift in Sources */,
 				03F1042E256F78B30004A2BD /* imageData.swift in Sources */,
-				03F10419256EEFD60004A2BD /* ColorItViewController.swift in Sources */,
+				03F10419256EEFD60004A2BD /* ColorItFromUrl.swift in Sources */,
 				033F876F256E0B06008DE77B /* api.swift in Sources */,
 				033F875E256DE147008DE77B /* alerts.swift in Sources */,
 				03F1041C256F280A0004A2BD /* colors.swift in Sources */,

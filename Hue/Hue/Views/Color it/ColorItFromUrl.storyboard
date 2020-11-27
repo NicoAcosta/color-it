@@ -19,7 +19,7 @@
         <!--ColorItViewController-->
         <scene sceneID="JIw-re-sYz">
             <objects>
-                <viewController title="ColorItViewController" id="vCG-vH-e86" customClass="ColorItViewController" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ColorItViewController" id="vCG-vH-e86" customClass="ColorItFromUrlVC" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6T-1n-g3b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbh-hH-b3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781" y="35"/>
+            <point key="canvasLocation" x="786" y="90"/>
         </scene>
     </scenes>
     <resources>

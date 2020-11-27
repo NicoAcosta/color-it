@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ColorItViewController : UIViewController {
+class ColorItFromUrlVC : UIViewController {
     
     @IBOutlet weak var inputImageURL: UITextField!
     

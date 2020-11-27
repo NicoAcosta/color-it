@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Image View Controller-->
+        <!--Image ViewerVC-->
         <scene sceneID="Rjv-xM-FFf">
             <objects>
-                <viewController storyboardIdentifier="ImageViewer" id="YHf-Ox-Imt" customClass="ImageViewController" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewer" id="YHf-Ox-Imt" customClass="ImageViewerVC" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MLE-az-tXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 
-class ImageViewController : UIViewController {
+class ImageViewerVC : UIViewController {
     
     @IBOutlet weak var beforeImageView: UIImageView!
     
