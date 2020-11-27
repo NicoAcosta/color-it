@@ -5,7 +5,7 @@ target 'Hue' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Hue
+  # Pods for Color It!
 
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
@@ -13,5 +13,7 @@ target 'Hue' do
   pod 'Alamofire', '~> 5.2'
 
   pod 'Kingfisher', '~> 5.0'
+
+  pod 'AlamofireImage', '~> 4.1'
 
 end
