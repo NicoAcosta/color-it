@@ -45,8 +45,7 @@ class ImageData {
         error = nil
     }
     
-    
-    convenience init(`fromURL` inputImageURL: String) {
+    convenience init(`fromURL` inputImageURL: String, handler: @escaping (Bool) -> Void ) {
         
         self.init()
         name = "Some Name"
@@ -70,16 +69,17 @@ class ImageData {
                             if let safeLocalPostImage = localPostImage {
                                 
                                 self.postImage = safeLocalPostImage
-                            
-                            } else { self.error = .gettingPostImage }
+                                handler(true)
+                                
+                            } else { self.error = .gettingPostImage; handler(false) }
                             
                         }
                         
-                    } else { self.error = .gettingPreImage }
+                    } else { self.error = .gettingPreImage; handler(false) }
                     
                 }
                 
-            } else { self.error = .couldNotGetPostURL }
+            } else { self.error = .couldNotGetPostURL; handler(false) }
         }
         
     }

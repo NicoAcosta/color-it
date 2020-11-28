@@ -24,7 +24,6 @@ final class NetworkingProvider {
     func getOutputImageURL(inputImageURL: String, success: @escaping (_ outputImageURL: String) -> (), failure: @escaping (_ error: Error?) -> ()) {
         
         let parameters = [ "image" : inputImageURL ]
-        //let parameters = [ "image" : "https://cdn.lynda.com/course/80300/80300-637286122770700192-16x9.jpg" ]
         
         
         AF.request(apiURL!, method: .post, parameters: parameters, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of:ImageResponse.self) {

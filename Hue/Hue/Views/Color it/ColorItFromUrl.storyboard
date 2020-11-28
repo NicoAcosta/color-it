@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ColorItViewController-->
+        <!--ColorItFromUrlVC-->
         <scene sceneID="JIw-re-sYz">
             <objects>
-                <viewController title="ColorItViewController" id="vCG-vH-e86" customClass="ColorItFromUrlVC" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ColorItFromUrlVC" id="vCG-vH-e86" customClass="ColorItFromUrlVC" customModule="Hue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6T-1n-g3b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,13 +58,34 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwY-Fg-MsH">
+                                <rect key="frame" x="30" y="553" width="354" height="279"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H9e-eQ-1eq">
+                                        <rect key="frame" x="127" y="89.5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="fo3-xV-tpG"/>
+                                            <constraint firstAttribute="height" constant="100" id="icZ-1C-Y8u"/>
+                                        </constraints>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="H9e-eQ-1eq" firstAttribute="centerY" secondItem="KwY-Fg-MsH" secondAttribute="centerY" id="PLh-2C-Fx5"/>
+                                    <constraint firstItem="H9e-eQ-1eq" firstAttribute="centerX" secondItem="KwY-Fg-MsH" secondAttribute="centerX" id="Z2K-Eg-VUM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zvq-Xv-pYQ"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
+                            <constraint firstItem="Zvq-Xv-pYQ" firstAttribute="trailing" secondItem="KwY-Fg-MsH" secondAttribute="trailing" constant="30" id="84o-QT-YFV"/>
+                            <constraint firstItem="KwY-Fg-MsH" firstAttribute="top" secondItem="k65-qy-HEF" secondAttribute="bottom" constant="30" id="F1T-hB-uJm"/>
                             <constraint firstItem="k65-qy-HEF" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="30" id="TJa-Qg-baS"/>
                             <constraint firstItem="nyh-BJ-rhT" firstAttribute="centerY" secondItem="i6T-1n-g3b" secondAttribute="centerY" constant="-50" id="W6t-2R-1XK"/>
+                            <constraint firstItem="Zvq-Xv-pYQ" firstAttribute="bottom" secondItem="KwY-Fg-MsH" secondAttribute="bottom" constant="30" id="W7F-eA-kb4"/>
                             <constraint firstItem="xz5-hK-ear" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="32" id="Wmh-an-T19"/>
+                            <constraint firstItem="KwY-Fg-MsH" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="30" id="eAX-oa-ekk"/>
                             <constraint firstItem="nyh-BJ-rhT" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="30" id="fOQ-8I-K4y"/>
                             <constraint firstItem="Zvq-Xv-pYQ" firstAttribute="trailing" secondItem="k65-qy-HEF" secondAttribute="trailing" constant="30" id="jnc-v9-Hoo"/>
                             <constraint firstItem="nyh-BJ-rhT" firstAttribute="top" secondItem="xz5-hK-ear" secondAttribute="bottom" constant="20" id="sVc-eM-t01"/>
@@ -73,6 +94,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="H9e-eQ-1eq" id="fxe-W9-MPn"/>
                         <outlet property="colorItButton" destination="k65-qy-HEF" id="R84-Lb-TDJ"/>
                         <outlet property="inputImageURL" destination="nyh-BJ-rhT" id="el3-cf-CoV"/>
                         <segue destination="PfR-AO-S2o" kind="show" identifier="goToImageViewer" id="9hL-4A-rot"/>
@@ -85,7 +107,7 @@
         <!--ImageViewer-->
         <scene sceneID="5dG-3L-Kgt">
             <objects>
-                <viewControllerPlaceholder storyboardName="ImageViewController" referencedIdentifier="ImageViewer" id="PfR-AO-S2o" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ImageViewer" referencedIdentifier="ImageViewer" id="PfR-AO-S2o" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gFb-cy-e4e"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbh-hH-b3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

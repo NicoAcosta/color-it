@@ -15,7 +15,9 @@ class ColorItFromUrlVC : UIViewController {
     
     @IBOutlet weak var colorItButton: UIButton!
     
-    var outputImageURL : String? = nil
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var imageDataForSegue : ImageData? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,20 +41,19 @@ class ColorItFromUrlVC : UIViewController {
     @IBAction func colorItButton(_ sender: Any) {
         
         inputImageURL.resignFirstResponder()
+        activityIndicator.startAnimating()
         
-        let imageData = ImageData(fromURL: inputImageURL.text!)
-        
-        NetworkingProvider.shared.getOutputImageURL(inputImageURL: inputImageURL.text!) { (url) in
+        imageDataForSegue = ImageData(fromURL: inputImageURL.text!) { (success) in
             
-            self.outputImageURL = url
+            if success {
+                let segue = UIStoryboardSegue(identifier: "goToImageViewer", source: self, destination: ImageViewerVC())
+                self.prepare(for: segue, sender: self)
+                self.activityIndicator.stopAnimating()
+                self.performSegue(withIdentifier: "goToImageViewer", sender: self)
+            } else {
+                self.okAlert(title: "Error", message: "Error processing your photo. Check the URL")
+            }
             
-            let segue = UIStoryboardSegue(identifier: "goToImageViewer", source: self, destination: ImageViewController())
-            self.prepare(for: segue, sender: self)
-            self.performSegue(withIdentifier: "goToImageViewer", sender: self)
-            
-            
-        } failure: { (error) in
-            self.okAlert(title: "Error", message: "Error \(error!)")
         }
         
         
@@ -60,16 +61,15 @@ class ColorItFromUrlVC : UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let imageVC = segue.destination as! ImageViewController
-        imageVC.inputImageURL = inputImageURL.text!
-        imageVC.outputImageURL = outputImageURL
+        let imageVC = segue.destination as! ImageViewerVC
+        imageVC.imageData = imageDataForSegue
     }
     
 }
 
 
 
-extension ColorItViewController : UITextFieldDelegate {
+extension ColorItFromUrlVC : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
