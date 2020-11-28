@@ -12,9 +12,11 @@ import Kingfisher
 
 class ImageViewerVC : UIViewController {
     
-    @IBOutlet weak var beforeImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var afterImageView: UIImageView!
+    @IBOutlet weak var preImageView: UIImageView!
+    
+    @IBOutlet weak var postImageView: UIImageView!
     
     @IBOutlet weak var shareButton: UIButton!
     
@@ -23,28 +25,26 @@ class ImageViewerVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         shareButton.layer.cornerRadius = 5
-        beforeImageView.image = imageData?.preImage
-        afterImageView.image = imageData?.postImage
+        nameLabel.text = imageData?.name
+        preImageView.image = UIImage(data: (imageData?.preImagePNG)!)
+        postImageView.image = UIImage(data: (imageData?.postImagePNG)!)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientLayer(colors: [violet, red])
     }
-    /*
-    convenience init(input: String, output: String) {
-        self.init()
-        inputImageURL = input
-        outputImageURL = output
-    }
-    */
     
     @IBAction func shareButtonAction(_ sender: Any) {
-        let items = [beforeImageView.image, afterImageView.image]
+        shareImages()
+    }
+    
+    
+    
+    func shareImages() {
+        let items = [preImageView.image, postImageView.image]
         let share = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
         present(share, animated: true)
     }
-    
-    
     
 }

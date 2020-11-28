@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ColorItFromUrlVC : UIViewController {
+class ColorItFromUrlVC : ColorItVC {
     
     @IBOutlet weak var inputImageURL: UITextField!
     
@@ -17,7 +17,7 @@ class ColorItFromUrlVC : UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var imageDataForSegue : ImageData? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,38 +32,30 @@ class ColorItFromUrlVC : UIViewController {
         
     }
     
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        blueGradientLayer()
-    }
+
     
     @IBAction func colorItButton(_ sender: Any) {
         
         inputImageURL.resignFirstResponder()
         activityIndicator.startAnimating()
         
-        imageDataForSegue = ImageData(fromURL: inputImageURL.text!) { (success) in
+        let _ = ImageDataBuilder(fromURL: inputImageURL.text!) {
+            (data) in
             
-            if success {
-                let segue = UIStoryboardSegue(identifier: "goToImageViewer", source: self, destination: ImageViewerVC())
-                self.prepare(for: segue, sender: self)
-                self.activityIndicator.stopAnimating()
-                self.performSegue(withIdentifier: "goToImageViewer", sender: self)
-            } else {
-                self.okAlert(title: "Error", message: "Error processing your photo. Check the URL")
-            }
+            self.imageDataForSegue = data
+            self.activityIndicator.stopAnimating()
+            
+            self.imageViewerSegue()
+            
+        } error: { (error) in
+            
+            self.okAlert(title: "Error", message: "Error processing your photo. Check the URL and your internet connection.")
             
         }
-        
-        
+
+            
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let imageVC = segue.destination as! ImageViewerVC
-        imageVC.imageData = imageDataForSegue
-    }
     
 }
 

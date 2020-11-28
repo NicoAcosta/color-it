@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="ImageData" representedClassName="ImageData" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="postImagePNG" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="postImageURL" optional="YES" attributeType="String"/>
+        <attribute name="preImagePNG" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="preImageURL" optional="YES" attributeType="String"/>
+        <attribute name="source" optional="YES" attributeType="String" customClassName="ImageSource"/>
     </entity>
     <elements>
-        <element name="ImageData" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="ImageData" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>
