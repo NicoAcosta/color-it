@@ -8,6 +8,13 @@
 import Foundation
 import Alamofire
 
+// Para decodear el JSON respuesta de la API
+struct ImageResponse : Codable {
+    
+    let id  : String?           //  id
+    let output_url : String?    //  output_url
+    
+}
 
 //  Para la API - obtener la url de la imágen respuesta
 
@@ -21,19 +28,20 @@ final class NetworkingProvider {
     
     let okStatusCodes = 200...299
     
-    func getOutputImageURL(inputImageURL: String, success: @escaping (_ outputImageURL: String) -> (), failure: @escaping (_ error: Error?) -> ()) {
+    func getOutputImageURL(inputImageURL: String, postImageURL: @escaping (_ outputImageURL: String) -> (), error: @escaping (_ error: Error?) -> ()) {
         
         let parameters = [ "image" : inputImageURL ]
         
-        
-        AF.request(apiURL!, method: .post, parameters: parameters, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of:ImageResponse.self) {
+        AF.request(apiURL!, method: .post, parameters: parameters, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of: ImageResponse.self) {
+            
             response in
             
             if let url = response.value?.output_url {
-                success(url)
+                postImageURL(url)
             } else {
-                failure(response.error)
+                error(response.error)
             }
+            
         }
         
     }

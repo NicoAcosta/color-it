@@ -120,7 +120,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="afterImageView" destination="9Pk-b9-Uc8" id="hzs-Ua-S5v"/>
                         <outlet property="nameLabel" destination="N3V-5S-RDN" id="FKD-Wy-LK1"/>
                         <outlet property="postImageView" destination="9Pk-b9-Uc8" id="abP-kv-6WR"/>
                         <outlet property="preImageView" destination="OcR-bZ-ao7" id="b9T-WZ-JJ6"/>

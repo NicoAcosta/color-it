@@ -18,10 +18,7 @@
 		0306BF8B257226170010BADC /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF8A257226170010BADC /* NetworkingProvider.swift */; };
 		0306BF8F257226230010BADC /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF8D257226230010BADC /* ImageViewer.storyboard */; };
 		0306BF90257226230010BADC /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF8E257226230010BADC /* ImageViewer.swift */; };
-		0306BF93257226370010BADC /* imageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF92257226370010BADC /* imageResponse.swift */; };
 		0306BF962572264E0010BADC /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF952572264E0010BADC /* colors.swift */; };
-		0306BF9A2572265F0010BADC /* GetImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF982572265E0010BADC /* GetImageViewController.swift */; };
-		0306BF9B2572265F0010BADC /* GetImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF992572265F0010BADC /* GetImageViewController.storyboard */; };
 		0306BFAF257226C90010BADC /* alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFAE257226C90010BADC /* alerts.swift */; };
 		0306BFB42572F8730010BADC /* imageDataBuiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFB32572F8730010BADC /* imageDataBuiler.swift */; };
 		0306BFB6257304BA0010BADC /* GothamBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFA02572267E0010BADC /* GothamBoldItalic.ttf */; };
@@ -56,10 +53,7 @@
 		0306BF8A257226170010BADC /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		0306BF8D257226230010BADC /* ImageViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
 		0306BF8E257226230010BADC /* ImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
-		0306BF92257226370010BADC /* imageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageResponse.swift; sourceTree = "<group>"; };
 		0306BF952572264E0010BADC /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
-		0306BF982572265E0010BADC /* GetImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetImageViewController.swift; sourceTree = "<group>"; };
-		0306BF992572265F0010BADC /* GetImageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetImageViewController.storyboard; sourceTree = "<group>"; };
 		0306BF9D2572267D0010BADC /* GothamUltra.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltra.ttf; sourceTree = "<group>"; };
 		0306BF9E2572267E0010BADC /* GothamBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBlack.ttf; sourceTree = "<group>"; };
 		0306BF9F2572267E0010BADC /* GothamUltraItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamUltraItalic.ttf; sourceTree = "<group>"; };
@@ -164,7 +158,6 @@
 				0306BFAE257226C90010BADC /* alerts.swift */,
 				0306BF6F2572246B0010BADC /* ImageView */,
 				0306BF702572246B0010BADC /* Color it */,
-				0306BF722572246B0010BADC /* Get image */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,15 +180,6 @@
 			path = "Color it";
 			sourceTree = "<group>";
 		};
-		0306BF722572246B0010BADC /* Get image */ = {
-			isa = PBXGroup;
-			children = (
-				0306BF992572265F0010BADC /* GetImageViewController.storyboard */,
-				0306BF982572265E0010BADC /* GetImageViewController.swift */,
-			);
-			path = "Get image";
-			sourceTree = "<group>";
-		};
 		0306BF732572246B0010BADC /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +192,6 @@
 		0306BF742572246B0010BADC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0306BF92257226370010BADC /* imageResponse.swift */,
 				0306BF872572260F0010BADC /* imageData.swift */,
 				0306BFB32572F8730010BADC /* imageDataBuiler.swift */,
 			);
@@ -316,7 +299,6 @@
 				0306BFC1257304BA0010BADC /* GothamBlackItalic.ttf in Resources */,
 				0306BFC2257304BB0010BADC /* GothamMediumItalic.ttf in Resources */,
 				0306BFBE257304BA0010BADC /* GothamThin.ttf in Resources */,
-				0306BF9B2572265F0010BADC /* GetImageViewController.storyboard in Resources */,
 				0306BFBB257304BA0010BADC /* GothamXLightItalic.ttf in Resources */,
 				0306BFC0257304BA0010BADC /* GothamLightItalic.ttf in Resources */,
 			);
@@ -374,7 +356,6 @@
 				0306BF882572260F0010BADC /* imageData.swift in Sources */,
 				0306BF962572264E0010BADC /* colors.swift in Sources */,
 				0306BEFD257221630010BADC /* Color_it_.xcdatamodeld in Sources */,
-				0306BF9A2572265F0010BADC /* GetImageViewController.swift in Sources */,
 				0306BFB42572F8730010BADC /* imageDataBuiler.swift in Sources */,
 				0306BF85257225F00010BADC /* ColorItFromUrl.swift in Sources */,
 				0306BEF3257221630010BADC /* AppDelegate.swift in Sources */,
@@ -382,7 +363,6 @@
 				0306BF8B257226170010BADC /* NetworkingProvider.swift in Sources */,
 				0306BFAF257226C90010BADC /* alerts.swift in Sources */,
 				0306BFC6257306590010BADC /* ColorIt.swift in Sources */,
-				0306BF93257226370010BADC /* imageResponse.swift in Sources */,
 				0306BEF5257221630010BADC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

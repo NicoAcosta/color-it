@@ -44,18 +44,18 @@ class ImageDataBuilder {
                         
                         self.preImage = safeLocalPreImage
                         
-                        self.getImage(self.postImageURL) { (localPostImage) in
-                            
-                            if let safeLocalPostImage = localPostImage {
-                                
-                                self.postImage = safeLocalPostImage
-                                data(self.imageData)
-                                
-                            } else { error(.gettingPostImage) }
-                            
-                        }
-                        
                     } else { error(.gettingPreImage) }
+                    
+                }
+                
+                self.getImage(self.postImageURL) { (localPostImage) in
+                    
+                    if let safeLocalPostImage = localPostImage {
+                        
+                        self.postImage = safeLocalPostImage
+                        data(self.imageData)
+                        
+                    } else { error(.gettingPostImage) }
                     
                 }
                 
@@ -86,14 +86,10 @@ class ImageDataBuilder {
         
         guard let localPreUrl = url else { return }
         
-        NetworkingProvider.shared.getOutputImageURL(inputImageURL: localPreUrl) { (localPostUrl) in
-            
-            handler(localPostUrl)
-            
-        } failure: { (error) in
-            
+        NetworkingProvider.shared.getOutputImageURL(inputImageURL: localPreUrl) { (url) in
+            handler(url)
+        } error: { (_) in
             handler(nil)
-            
         }
         
     }
