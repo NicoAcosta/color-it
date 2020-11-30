@@ -44,22 +44,24 @@ class ImageDataBuilder {
                         
                         self.preImage = safeLocalPreImage
                         
+                        self.getImage(self.postImageURL) { (localPostImage) in
+                            
+                            if let safeLocalPostImage = localPostImage {
+                                
+                                self.postImage = safeLocalPostImage
+                                
+                                data(self.imageData)
+                                
+                            } else { error(.gettingPostImage) }
+                            
+                        }
+                        
                     } else { error(.gettingPreImage) }
                     
                 }
                 
-                self.getImage(self.postImageURL) { (localPostImage) in
-                    
-                    if let safeLocalPostImage = localPostImage {
-                        
-                        self.postImage = safeLocalPostImage
-                        data(self.imageData)
-                        
-                    } else { error(.gettingPostImage) }
-                    
-                }
-                
             } else { error(.gettingPostURL) }
+            
         }
         
     }
@@ -98,9 +100,7 @@ class ImageDataBuilder {
     
     var imageData : ImageData {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let imageData = ImageData(context: context)
+        let imageData = DataHelper.shared.newItem()
         
         imageData.id            =   id
         imageData.name          =   name

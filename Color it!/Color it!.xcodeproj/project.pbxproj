@@ -14,13 +14,12 @@
 		0306BF02257221670010BADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF00257221670010BADC /* LaunchScreen.storyboard */; };
 		0306BF84257225F00010BADC /* ColorItFromUrl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF82257225F00010BADC /* ColorItFromUrl.storyboard */; };
 		0306BF85257225F00010BADC /* ColorItFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF83257225F00010BADC /* ColorItFromUrl.swift */; };
-		0306BF882572260F0010BADC /* imageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF872572260F0010BADC /* imageData.swift */; };
 		0306BF8B257226170010BADC /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF8A257226170010BADC /* NetworkingProvider.swift */; };
 		0306BF8F257226230010BADC /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF8D257226230010BADC /* ImageViewer.storyboard */; };
 		0306BF90257226230010BADC /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF8E257226230010BADC /* ImageViewer.swift */; };
 		0306BF962572264E0010BADC /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BF952572264E0010BADC /* colors.swift */; };
 		0306BFAF257226C90010BADC /* alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFAE257226C90010BADC /* alerts.swift */; };
-		0306BFB42572F8730010BADC /* imageDataBuiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFB32572F8730010BADC /* imageDataBuiler.swift */; };
+		0306BFB42572F8730010BADC /* imageDataBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFB32572F8730010BADC /* imageDataBuilder.swift */; };
 		0306BFB6257304BA0010BADC /* GothamBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFA02572267E0010BADC /* GothamBoldItalic.ttf */; };
 		0306BFB7257304BA0010BADC /* GothamMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFA6257226800010BADC /* GothamMedium.ttf */; };
 		0306BFB8257304BA0010BADC /* GothamUltra.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BF9D2572267D0010BADC /* GothamUltra.ttf */; };
@@ -36,6 +35,10 @@
 		0306BFC2257304BB0010BADC /* GothamMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFAA257226810010BADC /* GothamMediumItalic.ttf */; };
 		0306BFC3257304BB0010BADC /* GothamLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFA8257226810010BADC /* GothamLight.ttf */; };
 		0306BFC6257306590010BADC /* ColorIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFC5257306590010BADC /* ColorIt.swift */; };
+		0306BFCE2574365B0010BADC /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFCD2574365A0010BADC /* DataHelper.swift */; };
+		0306BFD7257443B30010BADC /* DataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFD6257443B30010BADC /* DataTable.swift */; };
+		0306BFDA257443E40010BADC /* DataTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0306BFD9257443E40010BADC /* DataTable.storyboard */; };
+		0306BFE125746E980010BADC /* ImageViewerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFE025746E980010BADC /* ImageViewerSegue.swift */; };
 		3FAB13973F4DD920A342D357 /* Pods_Color_it_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C6CB8084ED7BB45B9D8B3A /* Pods_Color_it_.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +52,6 @@
 		0306BF03257221670010BADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0306BF82257225F00010BADC /* ColorItFromUrl.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorItFromUrl.storyboard; sourceTree = "<group>"; };
 		0306BF83257225F00010BADC /* ColorItFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorItFromUrl.swift; sourceTree = "<group>"; };
-		0306BF872572260F0010BADC /* imageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageData.swift; sourceTree = "<group>"; };
 		0306BF8A257226170010BADC /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		0306BF8D257226230010BADC /* ImageViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
 		0306BF8E257226230010BADC /* ImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
@@ -69,8 +71,12 @@
 		0306BFA9257226810010BADC /* GothamBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBold.ttf; sourceTree = "<group>"; };
 		0306BFAA257226810010BADC /* GothamMediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamMediumItalic.ttf; sourceTree = "<group>"; };
 		0306BFAE257226C90010BADC /* alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alerts.swift; sourceTree = "<group>"; };
-		0306BFB32572F8730010BADC /* imageDataBuiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDataBuiler.swift; sourceTree = "<group>"; };
+		0306BFB32572F8730010BADC /* imageDataBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDataBuilder.swift; sourceTree = "<group>"; };
 		0306BFC5257306590010BADC /* ColorIt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorIt.swift; sourceTree = "<group>"; };
+		0306BFCD2574365A0010BADC /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		0306BFD6257443B30010BADC /* DataTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTable.swift; sourceTree = "<group>"; };
+		0306BFD9257443E40010BADC /* DataTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataTable.storyboard; sourceTree = "<group>"; };
+		0306BFE025746E980010BADC /* ImageViewerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerSegue.swift; sourceTree = "<group>"; };
 		0C3EF2CC38E0B7B225C1E390 /* Pods-Color it!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color it!.debug.xcconfig"; path = "Target Support Files/Pods-Color it!/Pods-Color it!.debug.xcconfig"; sourceTree = "<group>"; };
 		A346D5192C490F46C7DF2C5B /* Pods-Color it!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color it!.release.xcconfig"; path = "Target Support Files/Pods-Color it!/Pods-Color it!.release.xcconfig"; sourceTree = "<group>"; };
 		F7C6CB8084ED7BB45B9D8B3A /* Pods_Color_it_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_it_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0306BF6C2572246B0010BADC /* Fonts */,
-				0306BF732572246B0010BADC /* Network */,
+				0306BFD125743DEF0010BADC /* Data */,
 				0306BF6E2572246B0010BADC /* Views */,
 				0306BEF2257221630010BADC /* AppDelegate.swift */,
 				0306BEF4257221630010BADC /* SceneDelegate.swift */,
@@ -156,19 +162,21 @@
 			children = (
 				0306BF952572264E0010BADC /* colors.swift */,
 				0306BFAE257226C90010BADC /* alerts.swift */,
-				0306BF6F2572246B0010BADC /* ImageView */,
+				0306BF6F2572246B0010BADC /* Image Viewer */,
 				0306BF702572246B0010BADC /* Color it */,
+				0306BFD42574433F0010BADC /* DataTable */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0306BF6F2572246B0010BADC /* ImageView */ = {
+		0306BF6F2572246B0010BADC /* Image Viewer */ = {
 			isa = PBXGroup;
 			children = (
 				0306BF8D257226230010BADC /* ImageViewer.storyboard */,
 				0306BF8E257226230010BADC /* ImageViewer.swift */,
+				0306BFE025746E980010BADC /* ImageViewerSegue.swift */,
 			);
-			path = ImageView;
+			path = "Image Viewer";
 			sourceTree = "<group>";
 		};
 		0306BF702572246B0010BADC /* Color it */ = {
@@ -184,18 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				0306BF8A257226170010BADC /* NetworkingProvider.swift */,
-				0306BF742572246B0010BADC /* Data */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		0306BF742572246B0010BADC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				0306BF872572260F0010BADC /* imageData.swift */,
-				0306BFB32572F8730010BADC /* imageDataBuiler.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		0306BFB1257227860010BADC /* URL */ = {
@@ -205,6 +203,33 @@
 				0306BF83257225F00010BADC /* ColorItFromUrl.swift */,
 			);
 			path = URL;
+			sourceTree = "<group>";
+		};
+		0306BFCC257436380010BADC /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0306BFCD2574365A0010BADC /* DataHelper.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		0306BFD125743DEF0010BADC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0306BFB32572F8730010BADC /* imageDataBuilder.swift */,
+				0306BF732572246B0010BADC /* Network */,
+				0306BFCC257436380010BADC /* Core Data */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0306BFD42574433F0010BADC /* DataTable */ = {
+			isa = PBXGroup;
+			children = (
+				0306BFD6257443B30010BADC /* DataTable.swift */,
+				0306BFD9257443E40010BADC /* DataTable.storyboard */,
+			);
+			path = DataTable;
 			sourceTree = "<group>";
 		};
 		50CD3668FAB85DEC0236C42A /* Pods */ = {
@@ -288,6 +313,7 @@
 				0306BFBD257304BA0010BADC /* GothamBlack.ttf in Resources */,
 				0306BFC3257304BB0010BADC /* GothamLight.ttf in Resources */,
 				0306BFBA257304BA0010BADC /* GothamBold.ttf in Resources */,
+				0306BFDA257443E40010BADC /* DataTable.storyboard in Resources */,
 				0306BF84257225F00010BADC /* ColorItFromUrl.storyboard in Resources */,
 				0306BFB9257304BA0010BADC /* GothamUltraItalic.ttf in Resources */,
 				0306BF8F257226230010BADC /* ImageViewer.storyboard in Resources */,
@@ -353,17 +379,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0306BF882572260F0010BADC /* imageData.swift in Sources */,
 				0306BF962572264E0010BADC /* colors.swift in Sources */,
 				0306BEFD257221630010BADC /* Color_it_.xcdatamodeld in Sources */,
-				0306BFB42572F8730010BADC /* imageDataBuiler.swift in Sources */,
+				0306BFB42572F8730010BADC /* imageDataBuilder.swift in Sources */,
 				0306BF85257225F00010BADC /* ColorItFromUrl.swift in Sources */,
 				0306BEF3257221630010BADC /* AppDelegate.swift in Sources */,
 				0306BF90257226230010BADC /* ImageViewer.swift in Sources */,
 				0306BF8B257226170010BADC /* NetworkingProvider.swift in Sources */,
+				0306BFCE2574365B0010BADC /* DataHelper.swift in Sources */,
+				0306BFD7257443B30010BADC /* DataTable.swift in Sources */,
 				0306BFAF257226C90010BADC /* alerts.swift in Sources */,
 				0306BFC6257306590010BADC /* ColorIt.swift in Sources */,
 				0306BEF5257221630010BADC /* SceneDelegate.swift in Sources */,
+				0306BFE125746E980010BADC /* ImageViewerSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,7 +32,10 @@ class ColorItFromUrlVC : ColorItVC {
         
     }
     
-
+    @IBAction func dataTableButtonAction(_ sender: Any) {
+        //dataTableSegue()
+    }
+    
     
     @IBAction func colorItButton(_ sender: Any) {
         
@@ -43,9 +46,20 @@ class ColorItFromUrlVC : ColorItVC {
             (data) in
             
             self.imageDataForSegue = data
+            
+            do {
+                try DataHelper.shared.saveData()
+            } catch {
+                self.okAlert(title: "Error", message: "Could not save data")
+            }
+            
             self.activityIndicator.stopAnimating()
             
             self.imageViewerSegue()
+            
+            self.imageDataForSegue = nil
+            
+            try! DataHelper.shared.saveData()
             
         } error: { (error) in
             

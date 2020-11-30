@@ -28,6 +28,7 @@ final class NetworkingProvider {
     
     let okStatusCodes = 200...299
     
+    //  Deep AI api from url
     func getOutputImageURL(inputImageURL: String, postImageURL: @escaping (_ outputImageURL: String) -> (), error: @escaping (_ error: Error?) -> ()) {
         
         let parameters = [ "image" : inputImageURL ]
