@@ -64,11 +64,13 @@ extension DataCollectionVC : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DataCollectionCell", for: indexPath) as? DataCollectionCell
         let item = items![indexPath.row]
         cell!.loadData(item)
         
         return cell!
+        
     }
     
 }
