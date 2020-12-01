@@ -24,7 +24,7 @@ extension UIImageView {
     
     func borders() {
         
-        self.layer.borderColor = UIColor.label.cgColor
+        self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 5
         self.clipsToBounds = true
         self.layer.masksToBounds = true

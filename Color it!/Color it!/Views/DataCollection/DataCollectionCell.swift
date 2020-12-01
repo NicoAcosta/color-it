@@ -17,9 +17,6 @@ class DataCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        layer.borderWidth = 0.3
-        layer.borderColor = UIColor.label.cgColor
-        
         postImageView.borders()
         
     }

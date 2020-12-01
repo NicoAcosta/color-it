@@ -25,6 +25,8 @@ class DataCollectionVC : UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        collectionView.backgroundColor = .clear
+        
         collectionView.register(UINib(nibName: "DataCollectionCell", bundle: nil), forCellWithReuseIdentifier: "DataCollectionCell")
         
     }

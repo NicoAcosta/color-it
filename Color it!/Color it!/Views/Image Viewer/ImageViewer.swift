@@ -83,6 +83,7 @@ extension ImageViewerVC : UITextFieldDelegate {
             
             textField.resignFirstResponder()
             
+            
         } else {
             okAlert(title: "Empty name", message: "Your image must have a name")
         }
