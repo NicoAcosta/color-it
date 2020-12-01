@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ColorItFromUrlVC-->
+        <!--UrlVC-->
         <scene sceneID="JIw-re-sYz">
             <objects>
-                <viewController title="ColorItFromUrlVC" id="vCG-vH-e86" customClass="ColorItFromUrlVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="UrlVC" id="vCG-vH-e86" customClass="UrlVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6T-1n-g3b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,21 +75,6 @@
                                     <constraint firstItem="H9e-eQ-1eq" firstAttribute="centerX" secondItem="KwY-Fg-MsH" secondAttribute="centerX" id="Z2K-Eg-VUM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-6S-Yzg">
-                                <rect key="frame" x="20" y="64" width="150" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Wtc-vY-xYz"/>
-                                    <constraint firstAttribute="width" constant="150" id="yuN-Va-wGg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GothamMedium" family="Gotham Medium" pointSize="20"/>
-                                <state key="normal" title="Data Table">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="dataTableButtonAction:" destination="vCG-vH-e86" eventType="touchUpInside" id="cWk-vN-nmx"/>
-                                    <segue destination="nol-12-k5p" kind="show" id="Tkg-jb-4Gm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zvq-Xv-pYQ"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -102,11 +87,9 @@
                             <constraint firstItem="xz5-hK-ear" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="32" id="Wmh-an-T19"/>
                             <constraint firstItem="KwY-Fg-MsH" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="30" id="eAX-oa-ekk"/>
                             <constraint firstItem="nyh-BJ-rhT" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="30" id="fOQ-8I-K4y"/>
-                            <constraint firstItem="0Zw-6S-Yzg" firstAttribute="leading" secondItem="Zvq-Xv-pYQ" secondAttribute="leading" constant="20" id="gqt-8G-DKw"/>
                             <constraint firstItem="Zvq-Xv-pYQ" firstAttribute="trailing" secondItem="k65-qy-HEF" secondAttribute="trailing" constant="30" id="jnc-v9-Hoo"/>
                             <constraint firstItem="nyh-BJ-rhT" firstAttribute="top" secondItem="xz5-hK-ear" secondAttribute="bottom" constant="20" id="sVc-eM-t01"/>
                             <constraint firstItem="k65-qy-HEF" firstAttribute="centerY" secondItem="i6T-1n-g3b" secondAttribute="centerY" constant="50" id="uVb-Ng-omM"/>
-                            <constraint firstItem="0Zw-6S-Yzg" firstAttribute="top" secondItem="Zvq-Xv-pYQ" secondAttribute="top" constant="20" id="v34-VT-9Va"/>
                             <constraint firstItem="Zvq-Xv-pYQ" firstAttribute="trailing" secondItem="nyh-BJ-rhT" secondAttribute="trailing" constant="30" id="yK9-Se-2wI"/>
                         </constraints>
                     </view>

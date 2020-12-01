@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamLight.ttf">
+            <string>GothamLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DataCollectionCell" id="gTV-IL-0wX" customClass="DataCollectionCell" customModule="Color_it_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="328"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="328"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1z-vu-2aB">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="328"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="is4-Rd-d6g">
+                                <rect key="frame" x="40" y="80" width="200" height="208"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kt-Tf-vwL">
+                                <rect key="frame" x="20" y="30" width="240" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5QM-KA-7Ue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamLight" family="Gotham Light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3kt-Tf-vwL" firstAttribute="leading" secondItem="P1z-vu-2aB" secondAttribute="leading" constant="20" id="1s5-OM-I7j"/>
+                            <constraint firstItem="is4-Rd-d6g" firstAttribute="leading" secondItem="P1z-vu-2aB" secondAttribute="leading" constant="40" id="But-Jz-s93"/>
+                            <constraint firstAttribute="trailing" secondItem="is4-Rd-d6g" secondAttribute="trailing" constant="40" id="ITm-YZ-OSM"/>
+                            <constraint firstAttribute="trailing" secondItem="3kt-Tf-vwL" secondAttribute="trailing" constant="20" id="lnF-ph-ox1"/>
+                            <constraint firstAttribute="bottom" secondItem="is4-Rd-d6g" secondAttribute="bottom" constant="40" id="sZo-n0-QJt"/>
+                            <constraint firstItem="3kt-Tf-vwL" firstAttribute="top" secondItem="P1z-vu-2aB" secondAttribute="top" constant="30" id="suy-BX-dVX"/>
+                            <constraint firstItem="is4-Rd-d6g" firstAttribute="top" secondItem="3kt-Tf-vwL" secondAttribute="bottom" constant="30" id="trn-mg-scJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="P1z-vu-2aB" secondAttribute="bottom" id="GdV-w0-zth"/>
+                <constraint firstItem="P1z-vu-2aB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u6e-Ye-yPc"/>
+                <constraint firstItem="P1z-vu-2aB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="y4S-m5-23m"/>
+                <constraint firstAttribute="trailing" secondItem="P1z-vu-2aB" secondAttribute="trailing" id="zVM-9U-eSW"/>
+            </constraints>
+            <size key="customSize" width="280" height="328"/>
+            <connections>
+                <outlet property="nameLabel" destination="3kt-Tf-vwL" id="ab2-Ku-AHV"/>
+                <outlet property="postImageView" destination="is4-Rd-d6g" id="j4w-U5-FXk"/>
+            </connections>
+            <point key="canvasLocation" x="169.56521739130437" y="208.92857142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

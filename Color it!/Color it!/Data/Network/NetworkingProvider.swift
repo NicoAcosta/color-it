@@ -29,22 +29,75 @@ final class NetworkingProvider {
     let okStatusCodes = 200...299
     
     //  Deep AI api from url
-    func getOutputImageURL(inputImageURL: String, postImageURL: @escaping (_ outputImageURL: String) -> (), error: @escaping (_ error: Error?) -> ()) {
+    func getPostURL(`fromURL` inputImageURL: String?, postImageURL: @escaping (_ outputImageURL: String) -> (), error: @escaping (_ error: Error?) -> ()) {
         
-        let parameters = [ "image" : inputImageURL ]
-        
-        AF.request(apiURL!, method: .post, parameters: parameters, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of: ImageResponse.self) {
+        if let safeURL = inputImageURL {
             
-            response in
+            let parameters = [ "image" : safeURL ]
             
-            if let url = response.value?.output_url {
-                postImageURL(url)
-            } else {
-                error(response.error)
+            AF.request(apiURL!, method: .post, parameters: parameters, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of: ImageResponse.self) {
+                
+                response in
+                
+                if let url = response.value?.output_url {
+                    postImageURL(url)
+                } else {
+                    error(response.error)
+                }
+                
             }
             
-        }
+        } else { error(ImageDataError.gettingPostURL) }
+        
         
     }
     
+    func getPostURL(`fromImage` preImage: UIImage?, postImageURL: @escaping (_ outputImageURL: String) -> (), error: @escaping (_ error: Error?) -> ()) {
+        
+        if let safeImage = preImage {
+            
+            let data = safeImage.pngData()!
+            
+            AF.upload(multipartFormData: { (form) in
+                form.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
+            }, to: apiURL!, headers: headers).validate(statusCode: okStatusCodes).responseDecodable(of: ImageResponse.self) {
+                
+                response in
+                
+                if let url = response.value?.output_url {
+                    postImageURL(url)
+                } else {
+                    error(response.error)
+                }
+                
+            }
+            
+        } else {
+            error(ImageDataError.gettingPostURL)
+        }
+        
+        
+    }
+    
+    func getImage(`fromURL` url: String?, handler: @escaping (UIImage?) -> Void ) {
+        
+        if let safeURL = url {
+            
+            AF.request(URL(string: safeURL)!, method: .get).responseImage { (response) in
+                
+                if let safeImage = response.value {
+                    handler(safeImage)
+                } else {
+                    handler(nil)
+                }
+            }
+            
+        } else { handler(nil) }
+        
+        
+    }
+    
+    
+    
 }
+

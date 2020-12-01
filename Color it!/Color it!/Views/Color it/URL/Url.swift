@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ColorItFromUrlVC : ColorItVC {
+class UrlVC : ColorItVC {
     
     @IBOutlet weak var inputImageURL: UITextField!
     
@@ -32,15 +32,11 @@ class ColorItFromUrlVC : ColorItVC {
         
     }
     
-    @IBAction func dataTableButtonAction(_ sender: Any) {
-        //dataTableSegue()
-    }
-    
-    
     @IBAction func colorItButton(_ sender: Any) {
         
         inputImageURL.resignFirstResponder()
         activityIndicator.startAnimating()
+        
         
         let _ = ImageDataBuilder(fromURL: inputImageURL.text!) {
             (data) in
@@ -61,6 +57,7 @@ class ColorItFromUrlVC : ColorItVC {
             
             try! DataHelper.shared.saveData()
             
+            
         } error: { (error) in
             
             self.okAlert(title: "Error", message: "Error processing your photo. Check the URL and your internet connection.")
@@ -75,7 +72,7 @@ class ColorItFromUrlVC : ColorItVC {
 
 
 
-extension ColorItFromUrlVC : UITextFieldDelegate {
+extension UrlVC : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

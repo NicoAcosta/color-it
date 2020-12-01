@@ -7,12 +7,11 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
 
 class ImageViewerVC : UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var preImageView: UIImageView!
     
@@ -20,14 +19,26 @@ class ImageViewerVC : UIViewController {
     
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var editNameButton: UIButton!
+    
     var imageData : ImageData? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.delegate = self
+        nameTextField.returnKeyType = .done
+        nameTextField.borderStyle = .none
+        
         shareButton.layer.cornerRadius = 5
-        nameLabel.text = imageData?.name
+        nameTextField.text = imageData?.name
         preImageView.image = UIImage(data: (imageData?.preImagePNG)!)
         postImageView.image = UIImage(data: (imageData?.postImagePNG)!)
+        
+        if imageData?.name == nil {
+            nameTextField.becomeFirstResponder()
+        }
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -40,11 +51,45 @@ class ImageViewerVC : UIViewController {
     }
     
     
+    @IBAction func editNameButtonAction(_ sender: Any) {
+        nameTextField.becomeFirstResponder()
+    }
+    
+    
     
     func shareImages() {
         let items = [preImageView.image, postImageView.image]
         let share = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
         present(share, animated: true)
     }
+    
+}
+
+
+extension ImageViewerVC : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let safeName = textField.text, safeName != "" {
+            
+            if safeName != imageData?.name {
+                imageData?.name = safeName
+                do {
+                    try DataHelper.shared.saveData()
+                } catch {
+                    okAlert(title: "Error", message: "Could not save the name")
+                }
+            }
+            
+            textField.resignFirstResponder()
+            
+        } else {
+            okAlert(title: "Empty name", message: "Your image must have a name")
+        }
+        
+        return true
+    }
+    
+    
     
 }
