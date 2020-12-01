@@ -19,8 +19,12 @@ class DataCollectionVC : UIViewController {
     
     let myCellWidth = UIScreen.main.bounds.width / 2
     
+    @IBOutlet weak var topView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topView.backgroundColor = violet
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -34,7 +38,7 @@ class DataCollectionVC : UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        gradientLayer(colors: [violet, blue])
+        gradientLayer(colors: [red, violet, violet])
         
     }
     
