@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--LibraryVC-->
+        <!--from library-->
         <scene sceneID="rNF-iE-SOT">
             <objects>
-                <viewController storyboardIdentifier="Library" title="LibraryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bhj-pf-xBY" customClass="LibraryVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Library" title="from library" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bhj-pf-xBY" customClass="LibraryVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8r-B9-yLs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

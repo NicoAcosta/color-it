@@ -7,11 +7,14 @@
 
 import Foundation
 import UIKit
+import InteractiveSideMenu
 
 
-class DataCollectionVC : UIViewController {
+class DataCollectionVC : UIViewController, SideMenuItemContent, Storyboardable  {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var menuButton: UIButton!
     
     var items : [ImageData]? = DataHelper.shared.items
     
@@ -21,10 +24,14 @@ class DataCollectionVC : UIViewController {
     
     @IBOutlet weak var topView: UIView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topView.backgroundColor = violet
+        overrideUserInterfaceStyle = .light
+        
+        topView.backgroundColor = .clear
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -49,6 +56,9 @@ class DataCollectionVC : UIViewController {
     }
     
     
+    @IBAction func menuButtonAction(_ sender: Any) {
+        showSideMenu()
+    }
     
     
     
@@ -72,6 +82,10 @@ extension DataCollectionVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DataCollectionCell", for: indexPath) as? DataCollectionCell
+        if indexPath.row == 0 || indexPath.row == 1 {
+            cell!.topConstraint(constant: 50)
+            self.updateViewConstraints()
+        }
         let item = items![indexPath.row]
         cell!.loadData(item)
         
@@ -88,6 +102,7 @@ extension DataCollectionVC : UICollectionViewDelegate {
         if segue.identifier == "goToImageViewer" {
             let imageVC = segue.destination as! ImageViewerVC
             imageVC.imageData = imageDataForSegue
+            imageVC.sender = self
         }
         
     }
@@ -103,12 +118,18 @@ extension DataCollectionVC : UICollectionViewDelegate {
         
     }
     
+    
+    
 }
 
 
 extension DataCollectionVC : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 0 || indexPath.row == 1 {
+            return CGSize(width: myCellWidth, height: myCellWidth * 1.2 + 20)
+        }
+        
         return CGSize(width: myCellWidth, height: myCellWidth * 1.2)
     }
     

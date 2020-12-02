@@ -59,6 +59,7 @@
             <size key="customSize" width="280" height="328"/>
             <connections>
                 <outlet property="nameLabel" destination="3kt-Tf-vwL" id="ab2-Ku-AHV"/>
+                <outlet property="nameTopConstraint" destination="suy-BX-dVX" id="6s3-rc-oYE"/>
                 <outlet property="postImageView" destination="is4-Rd-d6g" id="j4w-U5-FXk"/>
             </connections>
             <point key="canvasLocation" x="169.56521739130437" y="208.92857142857142"/>

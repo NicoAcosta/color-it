@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Data CollectionVC-->
+        <!--images-->
         <scene sceneID="RbB-mH-BrI">
             <objects>
-                <viewController storyboardIdentifier="DataCollection" id="jEh-4x-nA2" customClass="DataCollectionVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataCollection" title="images" id="jEh-4x-nA2" customClass="DataCollectionVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vlm-VV-tvP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="menuButtonAction:" destination="jEh-4x-nA2" eventType="touchUpInside" id="b06-e3-E1J"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -57,8 +60,15 @@
                                     <constraint firstAttribute="height" constant="170" id="fIi-uc-X51"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-ZG-0W0" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="170" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="RLh-75-ZyZ"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ihr-cB-Exn">
-                                <rect key="frame" x="0.0" y="170" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="171" width="414" height="691"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="taR-q4-ug8">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -74,14 +84,18 @@
                             <constraint firstItem="V4l-cr-eFl" firstAttribute="trailing" secondItem="IvO-kF-WBe" secondAttribute="trailing" id="DXw-eQ-30R"/>
                             <constraint firstItem="IvO-kF-WBe" firstAttribute="bottom" secondItem="Ihr-cB-Exn" secondAttribute="bottom" id="Ibp-ca-wPU"/>
                             <constraint firstItem="Ihr-cB-Exn" firstAttribute="trailing" secondItem="IvO-kF-WBe" secondAttribute="trailing" id="QVV-NV-sNb"/>
-                            <constraint firstItem="Ihr-cB-Exn" firstAttribute="top" secondItem="V4l-cr-eFl" secondAttribute="bottom" id="iVV-tN-lU8"/>
+                            <constraint firstItem="MFf-ZG-0W0" firstAttribute="top" secondItem="V4l-cr-eFl" secondAttribute="bottom" id="SBy-Wd-Asf"/>
+                            <constraint firstItem="MFf-ZG-0W0" firstAttribute="leading" secondItem="IvO-kF-WBe" secondAttribute="leading" id="Zer-4g-aon"/>
                             <constraint firstItem="V4l-cr-eFl" firstAttribute="top" secondItem="Vlm-VV-tvP" secondAttribute="top" id="kPl-3a-xTF"/>
                             <constraint firstItem="Ihr-cB-Exn" firstAttribute="leading" secondItem="IvO-kF-WBe" secondAttribute="leading" id="kyC-EO-uB6"/>
+                            <constraint firstItem="Ihr-cB-Exn" firstAttribute="top" secondItem="MFf-ZG-0W0" secondAttribute="bottom" id="xLI-Eq-uck"/>
                             <constraint firstItem="V4l-cr-eFl" firstAttribute="leading" secondItem="IvO-kF-WBe" secondAttribute="leading" id="xon-lt-OGa"/>
+                            <constraint firstItem="IvO-kF-WBe" firstAttribute="trailing" secondItem="MFf-ZG-0W0" secondAttribute="trailing" id="zMD-Eq-4FD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ihr-cB-Exn" id="kDM-uP-2jc"/>
+                        <outlet property="menuButton" destination="ggi-4u-NDt" id="cCk-uD-oW4"/>
                         <outlet property="topView" destination="V4l-cr-eFl" id="Amt-Xt-PO8"/>
                         <segue destination="sBW-0r-ga5" kind="show" identifier="goToImageViewer" id="uZk-M2-D3F"/>
                     </connections>
@@ -98,11 +112,14 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QV-JE-0vJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="12"/>
+            <point key="canvasLocation" x="325" y="102"/>
         </scene>
     </scenes>
     <resources>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

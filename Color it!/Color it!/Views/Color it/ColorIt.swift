@@ -12,10 +12,11 @@ class ColorItVC : UIViewController {
     
     var imageDataForSegue : ImageData? = nil
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        blueGradientLayer()
+        gradientLayer(colors: gradientColors)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,6 +25,19 @@ class ColorItVC : UIViewController {
             let imageVC = segue.destination as! ImageViewerVC
             imageVC.imageData = imageDataForSegue
         }
+    }
+    
+    var gradientColors : [UIColor] { return [violet, red, orange] }
+    
+    func buttonStyle(_ button: UIButton) {
+        button.layer.cornerRadius = 5
+        button.setTitleColor(red, for: .normal)
+        button.backgroundColor = .white
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
     }
     
 }

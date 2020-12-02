@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import InteractiveSideMenu
 
 
-class LibraryVC : ColorItVC {
+class LibraryVC : ColorItVC, SideMenuItemContent, Storyboardable {
     
     @IBOutlet weak var selectImageButton: UIButton!
     
@@ -20,50 +21,13 @@ class LibraryVC : ColorItVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectImageButton.layer.cornerRadius = 5
-        selectImageButton.setTitleColor(white, for: .normal)
-        selectImageButton.gradientLayer(colors: [violet, red, orange])
+        buttonStyle(selectImageButton)
         
     }
     
     
     @IBAction func selectImageButtonAction(_ sender: Any) {
-        
-        //activityIndicator.startAnimating()
-        
         showImagePickerController()
-        
-//
-//        if let safeSelectedImage = selectedImage {
-//
-//            let _ = ImageDataBuilder(fromImage: safeSelectedImage, data: { (data) in
-//
-//
-//                self.imageDataForSegue = data
-//
-//
-//
-//                do {
-//                    try DataHelper.shared.saveData()
-//                } catch {
-//                    self.okAlert(title: "Error", message: "Could not save data")
-//                }
-//
-//                self.activityIndicator.stopAnimating()
-//
-//                self.imageViewerSegue()
-//
-//                self.imageDataForSegue = nil
-//
-//            }) { (error) in
-//                self.okAlert(title: "error", message: "error \(error!)")
-//            }
-//
-//
-//
-//        }
-        
-        
     }
     
     

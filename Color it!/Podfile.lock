@@ -59,6 +59,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.1.0):
     - GoogleUtilities/Logger
+  - InteractiveSideMenu (2.3)
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireImage (~> 4.1)
   - Firebase/Analytics
+  - InteractiveSideMenu
   - Kingfisher (~> 5.0)
 
 SPEC REPOS:
@@ -87,6 +89,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - InteractiveSideMenu
     - Kingfisher
     - nanopb
     - PromisesObjC
@@ -102,10 +105,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: f734da554aade8cc7928a31c2f3311897933a1bd
+  InteractiveSideMenu: d503a508c6d62a4d5d4372d9fb9e1795637a8e45
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 9e0a0088bcdee529227500ca91bd9380381d5b9e
+PODFILE CHECKSUM: fafacdabebbe25f43209170e2601ac194314a335
 
 COCOAPODS: 1.10.0

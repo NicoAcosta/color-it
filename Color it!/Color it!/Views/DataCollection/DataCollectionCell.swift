@@ -13,12 +13,18 @@ class DataCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var postImageView: UIImageView!
     
+    @IBOutlet weak var nameTopConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         postImageView.borders()
         
+    }
+    
+    func topConstraint(constant value: CGFloat) {
+        nameTopConstraint.constant = value
     }
     
     func loadData(_ imageData: ImageData?) {

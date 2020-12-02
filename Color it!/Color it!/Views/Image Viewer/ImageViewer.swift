@@ -21,10 +21,16 @@ class ImageViewerVC : UIViewController {
     
     @IBOutlet weak var editNameButton: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
+    var sender : DataCollectionVC? = nil
+    
     var imageData : ImageData? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        overrideUserInterfaceStyle = .light
         
         nameTextField.delegate = self
         nameTextField.returnKeyType = .done
@@ -56,7 +62,6 @@ class ImageViewerVC : UIViewController {
     }
     
     
-    
     func shareImages() {
         let items = [preImageView.image, postImageView.image]
         let share = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
@@ -70,15 +75,23 @@ extension ImageViewerVC : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if let safeName = textField.text, safeName != "" {
+        if let safeName = textField.text, !safeName.isEmpty {
             
             if safeName != imageData?.name {
+                
                 imageData?.name = safeName
+                
                 do {
                     try DataHelper.shared.saveData()
                 } catch {
                     okAlert(title: "Error", message: "Could not save the name")
                 }
+                
+                if let dataCollectionSender = sender {
+                    dataCollectionSender.fetchAndRoload()
+                    sender = nil
+                }
+                
             }
             
             textField.resignFirstResponder()

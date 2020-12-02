@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--UrlVC-->
+        <!--from url-->
         <scene sceneID="JIw-re-sYz">
             <objects>
-                <viewController title="UrlVC" id="vCG-vH-e86" customClass="UrlVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="from url" id="vCG-vH-e86" customClass="UrlVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i6T-1n-g3b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,16 +103,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6G4-Me-V80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="22" y="90"/>
-        </scene>
-        <!--DataTable-->
-        <scene sceneID="7RD-Ob-J1e">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DataTable" referencedIdentifier="DataTable" id="nol-12-k5p" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nMS-wv-pNZ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iJw-dq-FER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="725" y="-3"/>
         </scene>
         <!--ImageViewer-->
         <scene sceneID="5dG-3L-Kgt">
