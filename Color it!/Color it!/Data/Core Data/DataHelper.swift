@@ -42,6 +42,15 @@ final class DataHelper {
             self.items = try context.fetch(ImageData.fetchRequest())
         } catch {}
     }
+    
+    func delete(_ item: ImageData) throws {
+        context.delete(item)
+        do {
+            try saveData()
+        } catch {
+            throw error
+        }
+    }
 
     
 }

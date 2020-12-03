@@ -22,7 +22,7 @@ extension UIViewController {
 
 extension UIImageView {
     
-    func borders() {
+    func whiteBorders() {
         
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 5
@@ -32,3 +32,43 @@ extension UIImageView {
     }
     
 }
+
+
+extension UIViewController {
+    
+    
+    func share(items: [Any]) {
+        let share = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(share, animated: true)
+    }
+    
+    
+    //MARK: - Save image
+
+    func saveImage(_ image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    func saveImages(_ images: [UIImage]) {
+        for image in images {
+            saveImage(image)
+        }
+    }
+    
+    //MARK: - Save Image callback
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+
+        if let error = error {
+
+            print(error.localizedDescription)
+
+        } else {
+
+            print("Success")
+        }
+    }
+
+}
+
+

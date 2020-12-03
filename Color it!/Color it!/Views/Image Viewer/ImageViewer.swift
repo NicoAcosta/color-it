@@ -27,6 +27,16 @@ class ImageViewerVC : UIViewController {
     
     var imageData : ImageData? = nil
     
+    var imagesSaved : Int = 0
+    
+    var images : [UIImage] {
+        return [preImageView.image!, postImageView.image!]
+    }
+    
+    var amountOfImages : Int {
+        return images.count
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,8 +46,8 @@ class ImageViewerVC : UIViewController {
         nameTextField.returnKeyType = .done
         nameTextField.borderStyle = .none
         
-        shareButton.layer.cornerRadius = 5
         nameTextField.text = imageData?.name
+        
         preImageView.image = UIImage(data: (imageData?.preImagePNG)!)
         postImageView.image = UIImage(data: (imageData?.postImagePNG)!)
         
@@ -52,21 +62,29 @@ class ImageViewerVC : UIViewController {
         gradientLayer(colors: [violet, red])
     }
     
-    @IBAction func shareButtonAction(_ sender: Any) {
-        shareImages()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        sender = nil
     }
     
+    @IBAction func shareButtonAction(_ sender: Any) {
+        share(items: images)
+    }
+    
+    @IBAction func saveButtonAction(_ sender: Any) {
+        saveImages(images)
+    }
+    
+    @IBAction func deleteButtonAction(_ sender: Any) {
+        deleteIt(imageData!)
+    }
     
     @IBAction func editNameButtonAction(_ sender: Any) {
         nameTextField.becomeFirstResponder()
     }
     
     
-    func shareImages() {
-        let items = [preImageView.image, postImageView.image]
-        let share = UIActivityViewController(activityItems: items as [Any], applicationActivities: nil)
-        present(share, animated: true)
-    }
+    
     
 }
 

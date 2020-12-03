@@ -16,6 +16,4 @@ extension UIViewController {
         self.performSegue(withIdentifier: "goToImageViewer", sender: self)
     }
     
-    
-    
 }

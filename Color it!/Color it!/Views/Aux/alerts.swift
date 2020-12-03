@@ -15,6 +15,11 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func deleteAlert(title: String, message: String, deleteBlock: @escaping (UIAlertAction) -> Void) {
+        let alert = DeleteAlert(title: title, message: message, deleteBlock: deleteBlock)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 
@@ -27,5 +32,29 @@ class OkAlert : UIAlertController {
         addAction(okAction)
         
     }
+    
+}
+
+
+class DeleteAlert : UIAlertController {
+    
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    
+    func deleteAction(block: @escaping (UIAlertAction) -> Void) -> UIAlertAction {
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: block)
+        return deleteAction
+    }
+    
+    
+    convenience init(title: String?, message: String?, deleteBlock: @escaping (UIAlertAction) -> Void) {
+        
+        self.init(title: title, message: message, preferredStyle: .alert)
+        
+        //Add the actions to the alert controller
+        addAction(cancelAction)
+        addAction(deleteAction(block: deleteBlock))
+        
+    }
+    
     
 }

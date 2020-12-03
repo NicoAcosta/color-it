@@ -118,8 +118,6 @@ extension DataCollectionVC : UICollectionViewDelegate {
         
     }
     
-    
-    
 }
 
 
