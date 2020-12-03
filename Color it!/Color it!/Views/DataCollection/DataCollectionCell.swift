@@ -19,7 +19,7 @@ class DataCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        postImageView.borders()
+        postImageView.whiteBorders()
         
     }
     
