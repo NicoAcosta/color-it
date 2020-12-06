@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bhj-pf-xBY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamMedium.ttf">
+            <string>GothamMedium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--from library-->
+        <scene sceneID="rNF-iE-SOT">
+            <objects>
+                <viewController storyboardIdentifier="Library" title="from library" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bhj-pf-xBY" customClass="LibraryVC" customModule="Color_it_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8r-B9-yLs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10G-qU-5dL">
+                                <rect key="frame" x="30" y="423" width="354" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="f9o-mn-FpD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yAA-d5-ORE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamMedium" family="Gotham Medium" pointSize="20"/>
+                                <state key="normal" title="Select image">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageButtonAction:" destination="bhj-pf-xBY" eventType="touchUpInside" id="4UM-j2-TcE"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx6-gx-An9">
+                                <rect key="frame" x="30" y="503" width="354" height="329"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NH6-rr-3a6">
+                                        <rect key="frame" x="127" y="114.5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3Q7-rm-Ega"/>
+                                            <constraint firstAttribute="height" constant="100" id="Wym-BD-DVR"/>
+                                        </constraints>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NH6-rr-3a6" firstAttribute="centerX" secondItem="Yx6-gx-An9" secondAttribute="centerX" id="MJw-6b-LXE"/>
+                                    <constraint firstItem="NH6-rr-3a6" firstAttribute="centerY" secondItem="Yx6-gx-An9" secondAttribute="centerY" id="XRb-lH-Phf"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXr-yj-BQk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wIB-fv-Vsh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="y2o-Pg-KJf"/>
+                                </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem id="uc2-h1-b8v">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="zfA-r7-tDN">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="menuButtonAction:" destination="bhj-pf-xBY" id="ZEG-Lg-447"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HFD-ZC-PLT"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="VXr-yj-BQk" firstAttribute="leading" secondItem="HFD-ZC-PLT" secondAttribute="leading" id="A0n-1G-OWl"/>
+                            <constraint firstItem="VXr-yj-BQk" firstAttribute="top" secondItem="HFD-ZC-PLT" secondAttribute="top" id="FMs-Ik-eOU"/>
+                            <constraint firstItem="HFD-ZC-PLT" firstAttribute="trailing" secondItem="10G-qU-5dL" secondAttribute="trailing" constant="30" id="Hzb-r8-cya"/>
+                            <constraint firstItem="10G-qU-5dL" firstAttribute="leading" secondItem="HFD-ZC-PLT" secondAttribute="leading" constant="30" id="WMK-Ou-dTA"/>
+                            <constraint firstItem="HFD-ZC-PLT" firstAttribute="trailing" secondItem="Yx6-gx-An9" secondAttribute="trailing" constant="30" id="aGn-m1-QFk"/>
+                            <constraint firstItem="HFD-ZC-PLT" firstAttribute="bottom" secondItem="Yx6-gx-An9" secondAttribute="bottom" constant="30" id="o27-O2-Wlq"/>
+                            <constraint firstItem="Yx6-gx-An9" firstAttribute="top" secondItem="10G-qU-5dL" secondAttribute="bottom" constant="30" id="obI-pc-vPJ"/>
+                            <constraint firstItem="Yx6-gx-An9" firstAttribute="leading" secondItem="HFD-ZC-PLT" secondAttribute="leading" constant="30" id="uY3-T9-37w"/>
+                            <constraint firstItem="10G-qU-5dL" firstAttribute="centerY" secondItem="A8r-B9-yLs" secondAttribute="centerY" id="xSK-St-Rsu"/>
+                            <constraint firstItem="VXr-yj-BQk" firstAttribute="trailing" secondItem="HFD-ZC-PLT" secondAttribute="trailing" id="ySs-Ro-vFS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NH6-rr-3a6" id="Mf5-dF-QLh"/>
+                        <outlet property="selectImageButton" destination="10G-qU-5dL" id="8LN-Yw-WLx"/>
+                        <segue destination="tGS-Qn-Cnj" kind="show" identifier="goToImageViewer" id="5GS-2e-vD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07c-q5-VGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="90"/>
+        </scene>
+        <!--ImageViewer-->
+        <scene sceneID="kSY-XA-zwq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ImageViewer" storyboardName="ImageViewer" referencedIdentifier="ImageViewer" id="tGS-Qn-Cnj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ae8-vC-HBT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOv-0C-g89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="55"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

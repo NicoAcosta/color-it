@@ -1,0 +1,11 @@
+framework module Fito {
+  umbrella header "Fito.h"
+
+  export *
+  module * { export * }
+}
+
+module Fito.Swift {
+    header "Fito-Swift.h"
+    requires objc
+}

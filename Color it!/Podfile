@@ -18,7 +18,6 @@ target 'Color it!' do
 
   pod 'AlamofireImage', '~> 4.1'
 
-  pod 'InteractiveSideMenu'
 
 
 end

@@ -15,6 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearance.shadowImage = UIImage()
+        navigationBarAppearance.isTranslucent = true
+        
+        navigationBarAppearance.tintColor = .systemBackground
+        
+        let barButtonAppearance = UIBarButtonItem.appearance()
+        
+        barButtonAppearance.setTitleTextAttributes([.font: UIFont(name:"GothamMedium", size: 18)!], for: .normal)
+        
+        //FirebaseApp.configure()
+        
+        
+        
+        
         return true
     }
 
