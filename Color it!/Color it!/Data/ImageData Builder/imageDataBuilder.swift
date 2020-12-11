@@ -7,8 +7,6 @@
 
 import Foundation
 import UIKit
-import Alamofire
-import AlamofireImage
 
 enum ImageDataError : Error {
     case preURLnil, gettingPostURL, nilUrlForGetImage, gettingImage, gettingPreImage, gettingPostImage, gettingPreImagePath
