@@ -1,6 +1,6 @@
-# BlackHack
+# Color it!
 
-iOS BlackJack odds calculator
+iOS black and white images colorize app
 
 <p>
     <img src="Demo/01.PNG" alt="Demo 1" width="400" style="float: left; margint: 20px;">
