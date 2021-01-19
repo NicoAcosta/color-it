@@ -34,6 +34,7 @@ Temporary Items
 
 GoogleService-Info.plist
 .DS_Store
+deepAIKey.swift
 
 ## User settings
 xcuserdata/

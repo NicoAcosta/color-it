@@ -25,7 +25,7 @@ final class NetworkingProvider {
     
     let apiURL = URL(string: "https://api.deepai.org/api/colorizer")
     
-    let headers = HTTPHeaders([ "api-key" : "fd2e1c36-d059-4713-8b59-adb94fe7a8ce" ])
+    let headers = HTTPHeaders([ "api-key" : DeepAIKey().key ])
     
     let okStatusCodes = 200...299
     

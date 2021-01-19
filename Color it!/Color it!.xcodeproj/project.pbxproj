@@ -44,6 +44,7 @@
 		0306BFFF2574A9F10010BADC /* builderFromLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306BFFE2574A9F10010BADC /* builderFromLibrary.swift */; };
 		0306C017257578380010BADC /* DataCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306C015257578380010BADC /* DataCollectionCell.swift */; };
 		0306C018257578380010BADC /* DataCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0306C016257578380010BADC /* DataCollectionCell.xib */; };
+		03145E8325B7769700BAD21A /* deepAIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03145E8225B7769700BAD21A /* deepAIKey.swift */; };
 		033835302578126D003E6FE9 /* imagesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0338352F2578126D003E6FE9 /* imagesActions.swift */; };
 		03FDA9A525799216000D9773 /* appDelegateEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA98525799216000D9773 /* appDelegateEdit.swift */; };
 		03FDA9A625799216000D9773 /* Host.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FDA98825799216000D9773 /* Host.storyboard */; };
@@ -133,6 +134,7 @@
 		0306BFFE2574A9F10010BADC /* builderFromLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = builderFromLibrary.swift; sourceTree = "<group>"; };
 		0306C015257578380010BADC /* DataCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionCell.swift; sourceTree = "<group>"; };
 		0306C016257578380010BADC /* DataCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCollectionCell.xib; sourceTree = "<group>"; };
+		03145E8225B7769700BAD21A /* deepAIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deepAIKey.swift; sourceTree = "<group>"; };
 		0338352F2578126D003E6FE9 /* imagesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesActions.swift; sourceTree = "<group>"; };
 		03FDA98225799207000D9773 /* Fito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fito.framework; sourceTree = "<group>"; };
 		03FDA98525799216000D9773 /* appDelegateEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appDelegateEdit.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		0306BF732572246B0010BADC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				03145E8225B7769700BAD21A /* deepAIKey.swift */,
 				0306BF8A257226170010BADC /* NetworkingProvider.swift */,
 			);
 			path = Network;
@@ -676,6 +679,7 @@
 				03FDA9B725799216000D9773 /* SupportExt.swift in Sources */,
 				0306BFE125746E980010BADC /* ImageViewerSegue.swift in Sources */,
 				03FDA9B025799216000D9773 /* MenuViewController.swift in Sources */,
+				03145E8325B7769700BAD21A /* deepAIKey.swift in Sources */,
 				033835302578126D003E6FE9 /* imagesActions.swift in Sources */,
 				03FDA9AF25799216000D9773 /* MenuTransitioningDelegate.swift in Sources */,
 				0306BFE92574A1720010BADC /* DataCollectionVC.swift in Sources */,
