@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 // Para decodear el JSON respuesta de la API
 struct ImageResponse : Codable {
